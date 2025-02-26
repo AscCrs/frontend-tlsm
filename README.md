@@ -1,29 +1,80 @@
 # frontend-tlsm
 
-## Project setup
+## **Información**
+
+Este repositorio fue generado para el desarrollo del frontend del proyecto "Traductor de Lenguaje de Señas Mexicano" que hace uso de un modelo entrenado para realizar la traducción, para la certificación de *Samsung Innovation Campus*. El proyecto se encuentra estructurado siguiendo la arquitectura MVVM.
+
+## Configuración del Proyecto
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilación y cambios en tiempo real para un entorno de desarrollo
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compilación para un entorno de producción
 ```
 npm run build
 ```
 
-### Run your unit tests
+### Ejecutar pruebas unitarias
 ```
 npm run test:unit
 ```
 
-### Lints and fixes files
+### Linter y corrección de errores.
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Documentación
+
+La documentación del presente proyecto se encontrará respaldada por el documento correspondiente.
+A su vez, se contiene parte de la misma, dentro de cada componente, tanto para los modulos/componentes, como para el UIKIT.
+
+## Contenido Incluido
+
+El directorio del presente proyecto, está compuesto por la siguiente estructura:
+
+```
+frontend-tlsm
+├── package.json
+├── public
+│   ├── favicon.ico
+│   └── index.html
+├── src
+│   ├── assets
+│   ├── components
+│   ├── router
+│   │   └── index.js
+│   ├── services
+│   ├── views
+│   ├── main.js
+│   └── App.vue
+├── tests
+│   └── unit
+├── .browserslistrc
+├── .eslintrc.js
+├── .babel.config.js
+├── jsconfig.json
+├── package.json
+├── package-lock.json
+├── README.md
+├── .gitignore
+└── .vue.config.js
+```
+
+## Soporte de Navegadores
+
+Los navegadores soportados por este proyecto, así como el UIKIT son:
+
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Opera
+- Safari
+
+<!-- ### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/). -->
