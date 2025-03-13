@@ -2,29 +2,34 @@
 
 ## **Información**
 
-Este repositorio fue generado para el desarrollo del frontend del proyecto "Traductor de Lenguaje de Señas Mexicano" que hace uso de un modelo entrenado para realizar la traducción, para la certificación de *Samsung Innovation Campus*. El proyecto se encuentra estructurado siguiendo la arquitectura MVVM.
+Este repositorio fue generado para el desarrollo del frontend del proyecto "Traductor de Lenguaje de Señas Mexicano" que hace uso de un modelo entrenado para realizar la traducción, para la certificación de _Samsung Innovation Campus_. El proyecto se encuentra estructurado siguiendo la arquitectura MVVM.
 
 ## Configuración del Proyecto
+
 ```
 npm install
 ```
 
 ### Compilación y cambios en tiempo real para un entorno de desarrollo
+
 ```
 npm run serve
 ```
 
 ### Compilación para un entorno de producción
+
 ```
 npm run build
 ```
 
 ### Ejecutar pruebas unitarias
+
 ```
 npm run test:unit
 ```
 
 ### Linter y corrección de errores.
+
 ```
 npm run lint
 ```
