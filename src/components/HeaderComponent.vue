@@ -50,8 +50,8 @@ a span:hover {
   background-color: #EEE2E6;
   padding: 16px;
   width: 100%; 
-  border-bottom: 2px solid #eee;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+  z-index: 10;
 }
 
 /* Contenedor principal de la cabecera */
@@ -125,7 +125,6 @@ a span:hover {
 /* Estilos del título */
 .title {
   font-family: 'Coiny', cursive;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
   font-size: 22px;
   font-weight: bolder;
   margin-right: 40px;
