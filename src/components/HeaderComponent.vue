@@ -12,6 +12,7 @@
 
         <div class="center-content">
           <!-- Logo de la aplicación -->
+
           <img src="@/assets/oso.png" alt="Logo de NeuroSeñas" class="logo" aria-label="Logo de NeuroSeñas" />
           <span class="title">NeuroSeñasMX</span>
         </div>
@@ -20,8 +21,8 @@
       <!-- Sección de contacto alineada a la derecha -->
       <div class="contact">
         <a href="https://wa.me/2294122560" class="contact-link" aria-label="Enlace para contactar vía WhatsApp" target="_blank">
-          <span>Contáctanos</span>
-          <img src="@/assets/contacto.png" alt="Icono Contacto" class="contact-icon" aria-label="Icono de contacto" />
+          <span>Contactanos</span>
+          <img src="@/assets/chat1.png" alt="Icono Contacto" class="contact-icon" aria-label="Icono de contacto" />  
         </a>
       </div>
     </div>
@@ -48,7 +49,7 @@ a span:hover {
   align-items: center;
   height: 50px; /* Altura de la cabecera */
   background-color: #EEE2E6;
-  padding: 16px;
+  padding: 12px;
   width: 100%; 
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
   z-index: 10;
@@ -93,7 +94,7 @@ a span:hover {
   height: 35px;  /* Altura de los óvalos */
   border-radius: 25px;
   position: absolute;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Colores de los óvalos y su posición */
@@ -125,7 +126,7 @@ a span:hover {
 /* Estilos del título */
 .title {
   font-family: 'Coiny', cursive;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: bolder;
   margin-right: 40px;
   z-index: 5;
@@ -151,7 +152,7 @@ a span:hover {
   font-family: 'Coiny', cursive;
   font-weight: bold;
   font-size: 15px;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
   color: black;
   user-select: none;
 }

@@ -1,10 +1,11 @@
 <template>
-    
+
      <div class="background">
-        <HeaderComponent />
+      <HeaderComponent />
      </div>
     
 </template>
+
  <script setup lang="js">
  import HeaderComponent from './components/HeaderComponent.vue';
  import miFondo from '@/assets/fondo.png';
