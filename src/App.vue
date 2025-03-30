@@ -2,6 +2,7 @@
 
      <div class="background">
       <HeaderComponent />
+      <MainCard />
      </div>
     
 </template>
@@ -9,6 +10,7 @@
  <script setup lang="js">
  import HeaderComponent from './components/HeaderComponent.vue';
  import miFondo from '@/assets/fondo.png';
+ import MainCard from './components/MainCard.vue';
 </script>
 
 <style scoped>
@@ -30,8 +32,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.2);    /* Oscurece la imagen */
-  z-index: 1;                         /* Coloca el overlay por debajo del contenido */
+
+  background: rgba(0, 0, 0, 0.1);    
+ /* z-index: 1;                      */
 }
 
 
