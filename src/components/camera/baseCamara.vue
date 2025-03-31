@@ -50,8 +50,9 @@ defineExpose({
     width: 100%;
     max-width: 720px;
     background: purple;
-    border-radius: 8px;
+    border-radius: none;
     aspect-ratio: 1/1;
+    border-color:5px solid black;
 }
 
 </style>

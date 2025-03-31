@@ -1,69 +1,108 @@
 <script setup>
-
-import { defineProps, defineEmits } from 'vue';
+import { defineProps, defineEmits, ref } from 'vue';
 
 defineProps({
-    icon: {
+    cameraIcon: {
     type: String,
     default: '@/assets/cam.png'
     },
-    title: {
+    uploadIcon: {
     type: String,
-    default: 'Tomar foto'
+    default: '@/assets/upload.png'
     }
 });
 
-const emit = defineEmits(['capture']);
+const emit = defineEmits(['capture', 'upload']);
+
+const fileInput = ref(null);
+
+const handleUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) emit('upload', file);
+};
+
+const triggerUpload = () => fileInput.value.click();
 </script>
 
 <template>
-    <button 
-    @click="emit('capture')"
-    class="capture-button"
-    :title="title"
-    >
-    <img 
-        src='@/assets/cam.png'
-        alt="Icono de cámara" 
-        class="button-icon"
-    >
-    </button>
+    <div class="dual-button-container">
+        <!-- Input oculto para subir archivos -->
+        <input 
+        type="file" 
+        ref="fileInput" 
+        @change="handleUpload"
+        accept="image/*"
+        hidden
+        >
+        
+        <!-- Contenedor de los dos botones juntos -->
+        <div class="dual-button">
+        <!-- Botón izquierdo (Cámara) -->
+        <button 
+            @click="emit('capture')"
+            class="left-button"
+            title="Tomar foto"
+        >
+            <img src="@/assets/cam.png" alt="Cámara">
+        </button>
+        
+        <!-- Divisor -->
+        <div class="divider"></div>
+        
+        <!-- Botón derecho (Subir) -->
+        <button 
+            @click="triggerUpload"
+            class="right-button"
+            title="Subir imagen"
+        >
+            <img src="@/assets/upload.png" alt="Subir">
+        </button>
+        </div>
+    </div>
 </template>
-
+    
 <style scoped>
-/* Contenedor padre que centrará el botón */
-.button-container {
+.dual-button-container {
     display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center;     /* Centrado vertical */
-    width: 100%;
-    margin: 1rem 0;         /* Espaciado opcional */
+    justify-content: center;
+    margin-top: 3px;
 }
 
-.capture-button {
-    border: none;
-    background-color: #EDEDED;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 12px;
+.dual-button {
+    display: flex;
+    background: #EDEDED;
     border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+    
+.left-button, .right-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 12px 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    transition: all 0.3s ease;
 }
 
-.capture-button:hover {
-    background-color: #969696;
+.left-button:hover, .right-button:hover {
+    background-color: #e0e0e0;
 }
 
-.capture-button:active {
-    background-color: #6b6b6b;
-    transform: scale(0.95);
+.left-button:active, .right-button:active {
+    background-color: #d0d0d0;
+    transform: scale(0.98);
 }
 
-.button-icon {
+.divider {
+    width: 1px;
+    background-color: #ccc;
+    margin: 8px 0;
+}
+
+.dual-button img {
     width: 24px;
     height: 24px;
     filter: invert(30%);
